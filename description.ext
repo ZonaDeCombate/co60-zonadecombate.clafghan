@@ -86,3 +86,109 @@ class CfgFunctions {
 	#include "SLO\functions\cfgfunctions.hpp"
 	#include "SpyderCivInteraction\cfgfunctions.hpp"
 };
+
+
+class CfgSFX
+{
+	sounds[] = {};
+
+	class sfxsound
+	{
+		name = "sfxsound";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\sfxsound.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+
+	class sfxsound2
+	{
+		name = "sfxsound2";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\sfxsound2.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+
+	class sfxsound3
+	{
+		name = "sfxsound3";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\sfxsound3.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+
+	class sfxsound4
+	{
+		name = "sfxsound4";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\sfxsound4.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+
+	class sfxsound5
+	{
+		name = "sfxsound5";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\sfxsound5.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+        class sfxsound6
+	{
+		name = "sfxsound6";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\sfxsound2.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+
+	class sfxsound7
+	{
+		name = "sfxsound7";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\sfxsound3.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+
+	class sfxsound8
+	{
+		name = "sfxsound8";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\sfxsound4.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+
+	class sfxsound9
+	{
+		name = "news1";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\news1.ogg",10,1,50,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+        class sfxsound10
+	{
+		name = "music1";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\music1.ogg",15,1,18,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+
+	class sfxsound11
+	{
+		name = "music2";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\music2.ogg",15,1,18,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+        class sfxsound12
+	{
+		name = "kunduznews";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\kunduznews.ogg",7,1,18,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+        class sfxsound13
+	{
+		name = "SanginnewsBBC";
+		sounds[]={sfxsound};
+		sfxsound[]={"sound\SanginnewsBBC.ogg",15,1,18,1,1,1,0};
+		empty[]= {"",0,0,0,0,0,0,0};
+	};
+};
