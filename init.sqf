@@ -1,6 +1,10 @@
 //-----Logistica R3F --------//
 execVM "R3F_LOG\init.sqf";
 
+
+//--- Disable Saving
+enableSaving [false, false];
+
 ["INS_HINT_EH",{params [["_text",""]]; hintSilent format["%1",_text]; }] call CBA_fnc_addEventHandler;
 
 
@@ -20,6 +24,7 @@ if (!hasInterface && !isDedicated) then {
 };
 
 execVM "briefing.sqf";
+
 
 //-- Initalize Spyder tasking system
 ["rhs_faction_usmc_d","LOP_ISTS"] execVM "SpyderTasking\init.sqf";

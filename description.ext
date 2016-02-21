@@ -4,12 +4,12 @@
 //------------------------- On Load
 
 author = Swordfish | Toaster;					        // Visible when loading mission
-onLoadName = "Zona de Combate | ISIS";  		        // Visible when loading mission
+onLoadName = "Zona de Combate | Kunar";  		        // Visible when loading mission
 OnLoadMission = "Buscar informações e inteligência é a chave para desmontar as operações dos insurgentes em todo o território. ";
 loadScreen = "images\intro2.jpg";				        // Visible when loading mission
 overviewPicture = "images\intro2.jpg";			        // Visible when selecting mission
 
-onLoadIntro = "Zona de Combate";						// Displays a message while the intro is loading.
+onLoadIntro = "Zona de Combate | Kunar";						// Displays a message while the intro is loading.
 onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
 onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
 
