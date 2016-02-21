@@ -10268,7 +10268,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 241.694;this setposATL [15337.926758,866.35321,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this setdir 241.694;this setposATL [15337.926758,866.35321,0];this setVectorUp [0,0,1];this allowDamage false;";
 		};
 		class Item343
 		{
@@ -10278,7 +10278,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 241.694;this setposATL [15372.993164,886.865723,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this setdir 241.694;this setposATL [15372.993164,886.865723,0];this setVectorUp [0,0,1];this allowDamage false;";
 		};
 		class Item344
 		{

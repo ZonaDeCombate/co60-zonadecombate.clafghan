@@ -1,6 +1,8 @@
+// Intro
+[] call compileFinal preprocessfilelinenumbers "Scripts\intro.sqf";
+
 //-----Logistica R3F --------//
 execVM "R3F_LOG\init.sqf";
-
 
 //--- Disable Saving
 enableSaving [false, false];
@@ -24,7 +26,6 @@ if (!hasInterface && !isDedicated) then {
 };
 
 execVM "briefing.sqf";
-
 
 //-- Initalize Spyder tasking system
 ["rhs_faction_usmc_d","LOP_ISTS"] execVM "SpyderTasking\init.sqf";
@@ -66,5 +67,6 @@ execVM "Scripts\ALiVESettings.sqf";
     false
   };
 };*/
+
 
 waituntil {(player getvariable ["alive_sys_player_playerloaded",false])};
