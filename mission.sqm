@@ -1638,7 +1638,7 @@ class Mission
 						};
 						class Item6
 						{
-							value="144";
+							value="90";
 							parentCls="ALiVE_sys_profile";
 							typeName="activeLimiter";
 						};
@@ -3044,7 +3044,7 @@ class Mission
 						};
 						class Item6
 						{
-							value="1000";
+							value="99999";
 							parentCls="ALiVE_mil_cqb";
 							typeName="CQB_DENSITY";
 						};
