@@ -85,6 +85,19 @@ class CfgFunctions {
 	#include "VehicleSpawner\functions\cfgfunctions.hpp"
 	#include "SLO\functions\cfgfunctions.hpp"
 	#include "SpyderCivInteraction\cfgfunctions.hpp"
+
+
+	class zc
+	{
+		class radio
+		{
+			class radioRelay {
+				file = "Scripts\radioRelay.sqf";
+			};
+		};
+	};
+
+
 };
 
 

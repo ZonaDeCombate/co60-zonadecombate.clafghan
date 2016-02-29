@@ -17,6 +17,9 @@ enableSaving [false, false];
 // Iniciando sistema de animações
 call compile preprocessFileLineNumbers "ShoterAnimation\init.sqf";
 
+// Sistema de relay de rádio
+[300] spawn zc_fnc_radioRelay;
+
 //HandlessClient Inicialização
 if (!hasInterface && !isDedicated) then {
   headlessClients = [];
