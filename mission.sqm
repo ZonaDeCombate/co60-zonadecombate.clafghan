@@ -6717,7 +6717,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=442;
+		items=438;
 		class Item0
 		{
 			position[]={15613.914,0.77020198,461.37869};
@@ -11317,53 +11317,13 @@ class Mission
 		};
 		class Item437
 		{
-			position[]={15530.948,2.8314047,619.20343};
-			azimut=150.44489;
+			position[]={15539.855,2.8314047,617.83136};
+			azimut=150.44501;
 			id=564;
 			side="EMPTY";
 			vehicle="Land_DataTerminal_01_F";
 			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", false];";
-		};
-		class Item438
-		{
-			position[]={15529.796,2.8314047,621.25201};
-			azimut=150.44489;
-			id=565;
-			side="EMPTY";
-			vehicle="Land_DataTerminal_01_F";
-			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", false];";
-		};
-		class Item439
-		{
-			position[]={15528.132,2.8314047,624.03479};
-			azimut=150.44489;
-			id=566;
-			side="EMPTY";
-			vehicle="Land_DataTerminal_01_F";
-			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", false];";
-		};
-		class Item440
-		{
-			position[]={15526.713,2.8314047,626.41473};
-			azimut=150.44489;
-			id=567;
-			side="EMPTY";
-			vehicle="Land_DataTerminal_01_F";
-			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", false];";
-		};
-		class Item441
-		{
-			position[]={15525.302,2.8314047,628.65869};
-			azimut=150.44489;
-			id=568;
-			side="EMPTY";
-			vehicle="Land_DataTerminal_01_F";
-			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", false];";
+			init="veh = [this, 90] execVM ""respawn.sqf""";
 		};
 	};
 	class Markers
