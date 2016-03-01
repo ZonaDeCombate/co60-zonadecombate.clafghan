@@ -25,3 +25,4 @@
 "O_G_Mortar_01_F",
 "I_Mortar_01_F",
 "O_Mortar_01_F"
+"Land_DataTerminal_01_F"

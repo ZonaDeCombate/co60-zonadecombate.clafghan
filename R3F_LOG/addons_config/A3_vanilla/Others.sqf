@@ -54,11 +54,11 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["land_toiletbox_f", 4],
 	["land_woodentable_large_f", 3],
 	["land_woodentable_small_f", 2],
+	["land_dataterminal_01_F", 2],
+	["ACE_Track", 2],
+    ["ACE_Wheel", 2],	
 	["pole_f", 1],
 	["roadcone_f", 1]
-	["Land_DataTerminal_01_F", 2],
-	["ACE_Track", 1],
-	["ACE_Wheel", 1],
 ];
 
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
@@ -87,9 +87,9 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"land_toiletbox_f",
 	"land_woodentable_large_f",
 	"land_woodentable_small_f",
+	"land_dataterminal_01_F",
+	"ACE_Track",
+	"ACE_Wheel",
 	"pole_f",
 	"roadcone_f"
-	"Land_DataTerminal_01_F"
-	"ACE_Wheel"
-	"ACE_Track"
 ];
