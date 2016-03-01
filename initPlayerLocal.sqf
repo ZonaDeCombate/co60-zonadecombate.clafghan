@@ -1,5 +1,3 @@
-#include "SHK_Fastrope.sqf"
-
 // Check de piloto
 _null = [] execVM "Scripts\pilotCheck.sqf";
 
