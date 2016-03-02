@@ -3446,7 +3446,7 @@ class Mission
 				class Item0
 				{
 					position[]={15429.39,2.8314047,1033.8674};
-					azimut=244.05991;
+					azimut=244.06;
 					class args
 					{
 						items=4;
@@ -3481,6 +3481,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					init="[this] call ace_fastroping_fnc_equipFRIES";
 					syncId=9;
 					synchronizations[]={12};
 				};
@@ -3495,7 +3496,7 @@ class Mission
 				class Item0
 				{
 					position[]={15443.169,2.8314047,1004.3227};
-					azimut=244.05991;
+					azimut=244.06;
 					class args
 					{
 						items=4;
@@ -3530,6 +3531,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					init="[this] call ace_fastroping_fnc_equipFRIES";
 					syncId=10;
 					synchronizations[]={12};
 				};
@@ -3544,7 +3546,7 @@ class Mission
 				class Item0
 				{
 					position[]={15415.359,2.8314047,1063.2817};
-					azimut=244.05991;
+					azimut=244.06;
 					class args
 					{
 						items=4;
@@ -3579,6 +3581,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					init="[this] call ace_fastroping_fnc_equipFRIES";
 					syncId=11;
 					synchronizations[]={12};
 				};
@@ -3682,6 +3685,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					init="[this] call ace_fastroping_fnc_equipFRIES";
 					syncId=13;
 					synchronizations[]={12};
 				};
@@ -3696,7 +3700,7 @@ class Mission
 				class Item0
 				{
 					position[]={15457.655,2.8314047,977.87897};
-					azimut=244.05991;
+					azimut=244.06;
 					class args
 					{
 						items=4;
@@ -3731,6 +3735,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					init="[this] call ace_fastroping_fnc_equipFRIES";
 					syncId=14;
 					synchronizations[]={12};
 				};
@@ -10630,6 +10635,7 @@ class Mission
 			side="EMPTY";
 			vehicle="MELB_MH6M";
 			skill=0.60000002;
+			init="[this] call ace_fastroping_fnc_equipFRIES";
 		};
 		class Item371
 		{
@@ -10639,6 +10645,7 @@ class Mission
 			side="EMPTY";
 			vehicle="MELB_AH6M_H";
 			skill=0.60000002;
+			init="[this] call ace_fastroping_fnc_equipFRIES";
 		};
 		class Item372
 		{
@@ -10648,6 +10655,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			skill=0.60000002;
+			init="[this] call ace_fastroping_fnc_equipFRIES";
 			syncId=43;
 			synchronizations[]={16};
 		};
@@ -10659,6 +10667,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Transport_03_F";
 			skill=0.60000002;
+			init="[this] call ace_fastroping_fnc_equipFRIES";
 			syncId=44;
 			synchronizations[]={16};
 		};
