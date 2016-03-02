@@ -7,6 +7,8 @@ Modified for Zona de Combate by Toaster
 
 params [["_minHeight", 0, [0]]];
 
+minheightvar = _minHeight;
+
 
 // Para aqui se o cara não tem o mod TFAR
 if !(isClass (configFile >> "CfgPatches" >> "task_force_radio")) exitWith {};
@@ -18,20 +20,21 @@ _ace_relayActionON = [
     "relayActionOn",
     ("<t color=""#00FF00"">" + ("ATIVAR REPETIDOR DE RÁDIO") + "</t>"),
     "",
-    {
+      {
 
-      [_this select 0,3] call BIS_fnc_dataTerminalAnimate;
-      (_this select 0) setVariable ["isRelayActive",true,true];
-      systemChat "Repetidor de rádio ligado.";
+        [_this select 0,3] call BIS_fnc_dataTerminalAnimate;
+        (_this select 0) setVariable ["isRelayActive",true,true];
+        systemChat "Repetidor de rádio ligado.";
 
-      _marker = createMarker [format["marker_%1", (_this select 0)], getPos (_this select 0)];
-      _marker setMarkerShape "ICON";
-      _marker setMarkerType "mil_triangle";
-      _marker setMarkerColor "ColorGreen";
-      _marker setMarkerText "Repetidor de Rádio: Ligado";
+        _marker = createMarker [format["marker_%1", (_this select 0)], getPos (_this select 0)];
+        _marker setMarkerShape "ICON";
+        _marker setMarkerType "mil_triangle";
+        _marker setMarkerColor "ColorGreen";
+        _marker setMarkerText "Repetidor de Rádio: Ligado";
+
 
       },
-    { !((_this select 0) getVariable ["isRelayActive",false]) && damage (_this select 0) < 0.4 }
+    { (!((_this select 0) getVariable ["isRelayActive",false]) && damage (_this select 0) < 0.6) && (getTerrainHeightASL (getPos (_this select 0)) > minheightvar)}
 ] call ace_interact_menu_fnc_createAction;
 
 _ace_relayActionOFF = [
@@ -48,9 +51,28 @@ _ace_relayActionOFF = [
     { ((_this select 0) getVariable ["isRelayActive",false]) && damage (_this select 0) < 0.6 }
 ] call ace_interact_menu_fnc_createAction;
 
-[_ace_relayActionON,_ace_relayActionOFF] spawn {
+
+
+_ace_relayActionDisabled = [
+    "relayActionDisabled",
+    ("<t color=""#FF0000"">" + ("#ERR 34BA2: ALTURA INVÁLIDA") + "</t>"),
+    "",
+    {
+      systemChat format ["Devido a problemas na triangulação do sinal, uma altura de %1m é necessária para utilização deste equipamento.", minheightvar];
+
+      },
+    { getTerrainHeightASL (getPos (_this select 0)) < minheightvar }
+] call ace_interact_menu_fnc_createAction;
+
+
+
+
+
+
+[_ace_relayActionON,_ace_relayActionOFF, _ace_relayActionDisabled] spawn {
     _ace_relayActionON = _this select 0;
     _ace_relayActionOFF = _this select 1;
+    _ace_relayActionDisabled = _this select 2;
 
     // Verifica de 5 em 5 segundos se existe terminal a ser iniciado.
     while { true } do {
@@ -66,6 +88,7 @@ _ace_relayActionOFF = [
           // Adiciona as ações do ACE no terminal
           [_x , 0, [],_ace_relayActionON] call ace_interact_menu_fnc_addActionToObject;
           [_x , 0, [],_ace_relayActionOFF] call ace_interact_menu_fnc_addActionToObject;
+          [_x , 0, [],_ace_relayActionDisabled] call ace_interact_menu_fnc_addActionToObject;
 
           // Avisa que este terminal já foi configurado
           _x setVariable ["isTerminalInitialized", true];
