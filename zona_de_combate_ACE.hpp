@@ -38,12 +38,12 @@ class ACE_Settings {
           force = 1;
       };
       class ace_frag_SpallEnabled {
-          value = 1;
+          value = 0;
           typeName = "BOOL";
           force = 1;
       };
       class ace_frag_ReflectionsEnabled {
-          value = 1;
+          value = 0;
           typeName = "BOOL";
           force = 1;
       };
