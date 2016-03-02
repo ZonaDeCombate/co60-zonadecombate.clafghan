@@ -211,13 +211,9 @@ class Mission
 		forecastWeather=0;
 		forecastWind=0;
 		forecastWaves=0;
-		rainForced=1;
-		lightningsForced=1;
-		wavesForced=1;
-		windForced=1;
-		year=2005;
-		month=2;
-		day=20;
+		year=2016;
+		month=3;
+		day=3;
 		hour=8;
 		minute=0;
 		startFogDecay=0;
