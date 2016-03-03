@@ -598,7 +598,7 @@ class ACE_Settings {
           force = 1;
       };
       class ace_weather_useACEWeather {
-          value = 0;
+          value = 1;
           typeName = "BOOL";
           force = 1;
       };
