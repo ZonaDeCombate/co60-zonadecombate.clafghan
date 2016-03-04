@@ -1699,7 +1699,7 @@ class Mission
 						};
 						class Item4
 						{
-							value="true";
+							value="false";
 							parentCls="ALiVE_sys_data";
 							typeName="disableAAR";
 						};
