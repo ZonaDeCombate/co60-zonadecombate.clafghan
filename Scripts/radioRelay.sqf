@@ -8,6 +8,9 @@ Modified for Zona de Combate by Toaster
 params [["_minHeight", 0, [0]]];
 
 minheightvar = _minHeight;
+max_gain_r = 3.3; //ganho máximo que pode ser gerado pelas repetidoras para recepção
+max_gain = 5; //ganho máximo que pode ser gerado pelas repetidoras para transmiçao
+max_alldataterminal = 6; // quantidade de repetidoras necessárias para atingir o ganho máximo
 
 
 // Para aqui se o cara não tem o mod TFAR
@@ -127,22 +130,23 @@ if (isServer) then {
         missionNamespace setVariable ["isRelayScriptExecutedOnServer",true,true];
 
         while {true} do {
-
-            allDataTerminals = allMissionObjects "Land_DataTerminal_01_F";
-
-            if ({_x getVariable ["isRelayActive",true]} count allDataTerminals > 0) then {
-              {
-                  _x setVariable ["tf_receivingDistanceMultiplicator", 0.333, true];
-                  _x setVariable ["tf_sendingDistanceMultiplicator", ((({_x getVariable ["isRelayActive",false]} count allDataTerminals) / 4) + 1), true];
-              } forEach allPlayers;
-            } else {
-              {
-                  _x setVariable ["tf_receivingDistanceMultiplicator", 1, true];
-                  _x setVariable ["tf_sendingDistanceMultiplicator", 1, true];
-              } forEach allPlayers;
-            };
-            sleep 1;
-
+          allDataTerminals = allMissionObjects "Land_DataTerminal_01_F";
+          if(({_x getVariable ["isRelayActive",false]} count allDataTerminals) <= max_alldataterminal) then {
+            {
+              _reception = 6 - (max_gain_r / max_alldataterminal) * ({_x getVariable ["isRelayActive",false]} count allDataTerminals);
+              _transmission = 1 + (max_gain / max_alldataterminal) * ({_x getVariable ["isRelayActive",false]} count allDataTerminals);
+              player setVariable ["tf_receivingDistanceMultiplicator", _reception, true];
+              player setVariable ["tf_sendingDistanceMultiplicator", _transmission, true];
+            } forEach allPlayers;
+          } else {
+            {
+              _reception = 6 - max_gain_r;
+              _transmission = 1 + max_gain;
+              player setVariable ["tf_receivingDistanceMultiplicator", _reception, true];
+              player setVariable ["tf_sendingDistanceMultiplicator", _transmission, true];
+            } forEach allPlayers;
+          };
+        sleep 1;
         };
 
     };

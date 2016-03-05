@@ -454,7 +454,7 @@ class Mission
 						};
 						class Item2
 						{
-							value="10";
+							value="7";
 							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
 							typeName="terrain_interception_coefficient";
 						};
