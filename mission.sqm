@@ -1635,7 +1635,7 @@ class Mission
 						};
 						class Item4
 						{
-							value="0";
+							value="1100";
 							parentCls="ALiVE_sys_profile";
 							typeName="spawnTypeHeliRadius";
 						};
@@ -1647,7 +1647,7 @@ class Mission
 						};
 						class Item6
 						{
-							value="90";
+							value="100";
 							parentCls="ALiVE_sys_profile";
 							typeName="activeLimiter";
 						};
@@ -2989,7 +2989,7 @@ class Mission
 						};
 						class Item5
 						{
-							value="0.2";
+							value="0.05";
 							parentCls="ALiVE_mil_cqb";
 							typeName="CQB_spawn_setting";
 						};
@@ -3001,7 +3001,7 @@ class Mission
 						};
 						class Item7
 						{
-							value="5";
+							value="3";
 							parentCls="ALiVE_mil_cqb";
 							typeName="CQB_amount";
 						};
@@ -3025,7 +3025,7 @@ class Mission
 						};
 						class Item11
 						{
-							value="0";
+							value="800";
 							parentCls="ALiVE_mil_cqb";
 							typeName="CQB_spawndistanceHeli";
 						};
@@ -3091,7 +3091,7 @@ class Mission
 						};
 						class Item2
 						{
-							value="0";
+							value="800";
 							parentCls="ALiVE_amb_civ_population";
 							typeName="spawnTypeHeliRadius";
 						};
