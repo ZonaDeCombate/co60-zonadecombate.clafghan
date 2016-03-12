@@ -4,6 +4,10 @@
 //-----Logistica R3F --------//
 execVM "R3F_LOG\init.sqf";
 
+//----Script de Reboque-----
+
+execVM "reboque.sqf";
+
 //--- Disable Saving
 enableSaving [false, false];
 
