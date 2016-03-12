@@ -2795,7 +2795,7 @@ class Mission
 						};
 						class Item6
 						{
-							value="700";
+							value="2000";
 							parentCls="ALiVE_mil_cqb";
 							typeName="CQB_DENSITY";
 						};
