@@ -1,5 +1,5 @@
 #include "zona_de_combate_ACE.hpp"
-#include "R3F_LOG\desc_include.h"
+#include "r3f_log\desc_include.h"
 
 //------------------------- On Load
 
@@ -37,11 +37,11 @@ saving = 0; // disable saving
 
 //------------------------- Respawn
 
-Respawn = 3;											// 1 = bird 0 = none.. 2 = instant where died. 3 = base or respawn_west marker. 4 = respawn with team, or bird. 5 = into AI or bird.
+respawn = 3;											// 1 = bird 0 = none.. 2 = instant where died. 3 = base or respawn_west marker. 4 = respawn with team, or bird. 5 = into AI or bird.
 respawnDelay = 15;										// Delay prior to respawn, ensure longer than BTC revive delay.
 RespawnDialog = 0;                                      // default = 1. show respawn timer and scoreboard when killed.
 respawnButton = 0;
-respawnOnStart = -1
+respawnOnStart = -1;
 
 
 //-------------------------Garbage Coletor
@@ -60,39 +60,14 @@ wreckRemovalMaxTime = 300;
 
 
 
-//--------------------------INTEL-------------------------------
-
-//-- Man EventHandlers
-class Extended_Init_EventHandlers {
-	class CAManBase {
-		class Spyder_EHMan {
-			init = "_this call Spyder_fnc_EHMan";
-		};
-	};
-};
-
-
-//-- Includes
-#include "SpyderRecruitment\dialogs.hpp"
-#include "VehicleSpawner\dialogs.hpp"
-#include "SpyderCivInteraction\civilianInteraction.hpp"
-#include "data\dialogs\createBase.hpp"
-#include "SLO\dialog.hpp"
-
 //-- Functions
 class CfgFunctions {
-	#include "Functions\cfgfunctions.hpp"
-	#include "VehicleSpawner\functions\cfgfunctions.hpp"
-	#include "SLO\functions\cfgfunctions.hpp"
-	#include "SpyderCivInteraction\cfgfunctions.hpp"
-
-
 	class zc
 	{
 		class radio
 		{
 			class radioRelay {
-				file = "Scripts\radioRelay.sqf";
+				file = "scripts\radiorelay.sqf";
 			};
 		};
 	};

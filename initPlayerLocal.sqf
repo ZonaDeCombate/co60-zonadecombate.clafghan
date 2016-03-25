@@ -1,8 +1,5 @@
 // Check de piloto
-_null = [] execVM "Scripts\pilotCheck.sqf";
-
-//-- Add insurgency menu
-execVM "Scripts\addInsurgencyMenu.sqf";
+_null = [] execVM "scripts\pilotcheck.sqf";
 
 //-- Create locations for ALiVE custom objectives
 //execVM "Scripts\createLocations.sqf";
